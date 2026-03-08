@@ -1,4 +1,6 @@
-java.util.HashSet;
+package com.cykei.leetcode;
+
+import java.util.HashSet;
 import java.util.Set;
 
 public class _1980 {
@@ -8,7 +10,7 @@ public class _1980 {
     String[] range = {"0", "1"};
 
     public void dfs(int cnt, StringBuilder temp) {
-        if (answer != null) return; // 이미 정답을 찾았으면 더이상 dfs 를 진행하지 않는다. 
+        if (answer != null) return; // 이미 정답을 찾았으면 더이상 dfs 를 진행하지 않는다.
         if (cnt == N) {
             String tempResult = temp.toString();
             if (sets.contains(tempResult)) {
@@ -44,6 +46,6 @@ public class _1980 {
     public static void main(String[] args) {
         _1980 a = new _1980();
         String answer = a.findDifferentBinaryString(new String[]{"111", "011", "001"});
-        System.out.println(answer); // "110"
+        System.out.println(answer); // "000"
     }
 }
